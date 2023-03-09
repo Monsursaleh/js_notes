@@ -21,32 +21,32 @@ let sendJason = (dataArr) => {
 };
 // /////7////---------------
 
-// // // dataObj();
-// let a = fetch("https://jsonplaceholder.typicode.com/users").then((response) =>
-//   response.json()
-// );
+// // dataObj();
+let a = fetch("https://jsonplaceholder.typicode.com/users").then((response) =>
+  response.json()
+);
 
-// a.then((jason) => {
-//   datalist(jason);
-// });
+a.then((jason) => {
+  datalist(jason);
+});
 
-// const datalist = (data) => {
-//   console.log("data comig to fucntion", data);
-//   list.innerHTML = data.map((item) => {
-//     return `<li>${item.name} - ${item.phone}`;
-//   });
-// };
+const datalist = (data) => {
+  console.log("data comig to fucntion", data);
+  list.innerHTML = data.map((item) => {
+    return `<li>${item.name} - ${item.phone}`;
+  });
+};
 
-// console.log(a);
-// let b = fetch("https://jsonplaceholder.typicode.com/posts");
-// console.log(b);
-// console.log("checking ");
-// async function dataObj() {
-//   let response = await fetch("https://jsonplaceholder.typicode.com/users");
-//   let dataOuput = await response.jason();
-//   console.log(dataOuput);
-// }
-// dataObj();
+console.log(a);
+let b = fetch("https://jsonplaceholder.typicode.com/posts");
+console.log(b);
+console.log("checking ");
+async function dataObj() {
+  let response = await fetch("https://jsonplaceholder.typicode.com/users");
+  let dataOuput = await response.jason();
+  console.log(dataOuput);
+}
+dataObj();
 (async () => {
   let url = "https://jsonplaceholder.typicode.com/users";
   let data = await fetch(url);
