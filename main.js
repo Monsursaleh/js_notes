@@ -1,24 +1,24 @@
-let list = document.querySelector(".list");
+// let list = document.querySelector(".list");
 // step 1:: reqiesting the server for data returning promise
 let request = fetch("https://jsonplaceholder.typicode.com/users");
 
-console.log(request);
+console.log("request", request);
 // step 2 : response comes as promise
 let data = request.then((response) => response.json());
-console.log(data);
-// // step 3//need call back fucntion jasondata
-// let dataOutput = data.then((jasonData) => {
-//   ///call back
-//   sendJason(jasonData);
-// });
+console.log("data", data);
+// step 3//need call back fucntion jasondata
+let dataOutput = data.then((jasonData) => {
+  ///call back
+  sendJason(jasonData);
+});
 
-// //call back defination for rendering the data
-// let sendJason = (dataArr) => {
-//   console.log("data is coming  ", dataArr);
-//   dataArr.map((item) => {
-//     console.log(item.name);
-//   });
-// };
+//call back defination for rendering the data
+let sendJason = (dataArr) => {
+  console.log("data is coming  ", dataArr);
+  dataArr.map((item) => {
+    console.log(item.name);
+  });
+};
 // /////7////---------------
 
 // // // dataObj();
